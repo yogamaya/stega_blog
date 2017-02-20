@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block posts %}
+    {% for post in object_list %}
+
+    <h5>{{ post.title }}</h5>
+    <p class="data">{{ post.datetime }}</p>
+
+{% endblock %}

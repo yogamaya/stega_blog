@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <title>Stega Blog</title>
+        <link href="{% static "bootstrap-3/css/bootstrap.css" %}" rel="stylesheet">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+
+        <link href="{% static "css/base.css" %}" rel="stylesheet">
+    </head>
+<body>
+
+
+    <header>
+        <nav class="nav">
+            <ul class="nav nav-tabs">
+                <li {% if request.path == '/' %}class="active"{% endif %}><a href="/">Главная</a></li>
+                <li><a href="http://stega.pythonanywhere.com/about/">О блоге</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+<section class="strip">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6" id="header1">
+            <img src="{% static "image/hameleon.jpg" %}">
+        </div>
+        <div class="col-md-6" id="header">
+            <h1>СтегаБлог</h1>
+            <h3>Популярно о стеганографии</h3>
+            <h5>О ней не должны знать лишь избранные</h5>
+        </div>
+    </div>
+ </div>
+
+</section>
+
+    <div class="view">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                {% block content %}
+                {% endblock %} <!-- место для контента -->
+            </div>
+
+            <div class="col-md-3">
+                <section class="right">
+                    <div class="about_us">
+                        <img src="{% static "image/hameleon.jpg" %}">
+                        <p></p>
+                    </div>
+                    <div class="recent_post">
+                        <div class="box"><h4>Недавние посты</h4></div>
+                        {% block posts %}
+
+                        {% endblock %}
+                    </div>
+                    <div class ="archive">
+                        <div class="box"><h4>Архив</h4></div>
+                        {% block archive %}
+                        {% endblock %}
+                    </div>
+                    <div class="tag_cloud">
+                        <div class="box"><h4>Тэги</h4></div>
+                        {% block tags %}
+                        {% endblock %}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+ </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; Авторские права принадлежат П. Шипулину<p>
+                        <p>E-mail: PShipulin&#64;gmail.com</p>
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static "bootstrap-3/js/bootstrap.min.js" %}"></script>
+</body>
+</html>

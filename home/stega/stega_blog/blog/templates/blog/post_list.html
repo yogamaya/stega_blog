@@ -1,0 +1,53 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in object_list %}
+
+        {% autoescape off %}
+        <section class="blog">
+            <div class="content">
+                <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+                <h2>{{ post.title }}</h2>
+                <p class="data">{{ post.datetime }}</p>
+                <p>{{ post.content }}</p>
+                <div>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-lg">Читать</button>
+                    <!-- Modal -->
+                    <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">{{ post.title }}</h4>
+                        </div>
+                        <div class="modal-body"><p>{{ post.content }}</p></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+        {% endautoescape %}
+
+
+    {% empty %}
+    <p>Нет постов</p>
+    {% endfor %}
+
+{% endblock %}
+
+{% block posts %}
+    <div class="last_posts">
+    {% for post in last_posts %}
+        <a href="{{ post.get_absolute_url }}">
+            <div class="last_posts__post">
+                {{ post.title }}
+                <div class="last_posts__post__date">{{ post.datetime|date:"d M Y" }}</div>
+            </div>
+        </a>
+    {% endfor %}
+    </div>
+{% endblock %}

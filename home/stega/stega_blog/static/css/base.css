@@ -1,0 +1,171 @@
+* {
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+h1, h3, h5 {
+    font-family: 'Cormorant', serif;
+}
+
+h2, h4 {
+    font-family: 'Comfortaa', cursive;
+}
+
+h2{
+    font-size: 48px;
+
+}
+p {
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+}
+
+
+header {
+    background-color: #2F2D2A;
+    height: 70px;
+    padding-top: 11px;
+}
+
+.nav {
+    margin-left: 75px;
+
+    border-style: none;
+   font-size: 18px;
+    font-stretch: condensed;
+}
+
+.nav .nav-tabs > li > a {
+  margin-right: 2px;
+  border-style: none;
+  color: #8F897F;
+    text-shadow: 1px 1px 4 #000000;
+    background-color: #2F2D2A;
+}
+
+.nav .nav-tabs > li > a:hover {
+  border-style: none;
+  color: #EFE4D5;
+  background-color: #2F2D2A;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #EFE4D5;
+  background-color: #2F2D2A;
+  border-style: none;
+  cursor: default;
+}
+
+.strip {
+    height: 650px;
+    padding-top: 50px;
+    background-color: #65AA23;
+}
+
+#header1{
+    text-align: right;
+}
+#header {
+    width: 350px;
+    height: 450px;
+    border: 2px solid black;
+    padding-top: 110px;
+    padding-left: 30px;
+    background-color: #ffffff;
+}
+
+.view {
+    margin-top: 20px;
+
+}
+
+.blog {
+
+    background-color: #BFB6AA;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-default {
+    background-color: #FF650C;
+    border-color: #5F5B55;
+    color: #FFFFFF;
+    border-radius: none;
+}
+.btn {
+    border-radius: 0px;
+    border-style: none;
+    padding: 10px 25px;
+
+}
+.btn-default:focus {
+  color: #333333;
+  background-color: #FF650C;
+    border-color: #BFB6AA
+}
+
+.btn-default:hover {
+  color: #EFE4D5;
+  background-color: #A94308;
+    border-color: #BFB6AA;
+}
+
+.btn-default:active {
+  color: #FFFFFF;
+  background-color: #FF650C;
+border-style: none;
+}
+
+.btn-default:active:hover,
+.btn-default:active:focus {
+  color: #EFE4D5;
+border-style: none;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.recent_post {
+    height: 200 px;
+}
+
+.box {
+    background-color: #2F2D2A;
+    color: #BFB6AA;
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+}
+
+.archive {
+    height: 200px;
+}
+
+footer {
+    background-color: #2F2D2A;
+    color: #EFE4D5;
+    padding: 10px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+.last_posts {
+    margin-bottom: 25px;
+}
+
+.last_posts__post {
+    margin-bottom: 10px;
+}
+
+.last_posts__post__date {
+    font-size: 13px;
+    color: #aaa;
+}
